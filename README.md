@@ -23,7 +23,10 @@ https://pokeapi.co/docs/v2
 ## Peek view
 
  <p float="left">
+ <img src="assets/ss/login.png" width="200" />  
 <img src="assets/ss/list.png" width="200" />
 <img src="assets/ss/fav_list.png" width="200" />  
-<img src="assets/ss/add.png" width="200" />  
+<img src="assets/ss/detail.png" width="200" />  
+ <img src="assets/ss/add.png" width="200" />  
+
 </p>
