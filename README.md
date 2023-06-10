@@ -3,7 +3,7 @@
  Pokemon App to display initial list of pokemon further showing more information about a Pokemon when tapped.
 
 
-  - An authentication screen to login with dummy user
+  - An authentication screen to login with dummy user(if user logged in => redirects to homescreen)
   - Feature to save favorite Pokemon with separate screen to list them
   - Search for a pokemon using Pokemon id or name
   - An Infintite scrollable list for all the pokemons
@@ -13,6 +13,11 @@
   - Used cubit for state management
   - Attractive & interactive UI
   - Clean code lines have been followed
+
+
+## Dummy Data
+- dummy username = "username"
+- dummy password = "password"
 
 ## API 
 
