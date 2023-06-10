@@ -1,3 +1,8 @@
+
+
+/// envrionment class where all the main components are declared as per the requirement like
+/// debuf env, dev env, qa env, prod env
+
 enum Environment { dev }
 
 Environment currentEnvironment = Environment.dev;

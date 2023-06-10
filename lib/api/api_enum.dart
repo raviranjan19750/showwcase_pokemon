@@ -6,6 +6,8 @@ import 'client/api_client.dart';
 import 'model/api_request_model.dart';
 import 'model/api_response_model.dart';
 
+/// making api call on the basis of request type of api.
+
 enum RequestType { post, get, put, delete }
 
 enum Api { getPokemon, getPokemonById, addPokemon }

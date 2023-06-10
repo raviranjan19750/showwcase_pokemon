@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pokemon/main.dart';
 
+
+/// theme for light and dark mode
 class AppTheme {
   AppTheme._privateConstructor();
 

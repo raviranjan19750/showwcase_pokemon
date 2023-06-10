@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'app_theme.dart';
 
+
+
+/// text styles as per text theme. no need to write text styles everytime.
 enum AppFontWeight { extraBold, bold, semiBold, medium, regular, light }
 
 extension AppFontWeightMapping on AppFontWeight {

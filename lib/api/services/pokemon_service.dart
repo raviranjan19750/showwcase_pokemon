@@ -5,6 +5,9 @@ import 'package:tuple/tuple.dart';
 import '../model/pokemon/pokemon_detail.dart';
 import '../model/query_model.dart';
 
+
+/// pokemon service mixin to handle the infinite pagination logic whn list api gets called
+
 mixin PokemonService {
   Future<Tuple2<List<PokemonListDetail>, int>> getPokemonList(
       {required int limit, required int offset}) async {

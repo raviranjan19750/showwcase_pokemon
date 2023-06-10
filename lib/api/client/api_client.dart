@@ -2,6 +2,8 @@ import 'package:dio/dio.dart';
 import 'package:pokemon/api/model/api_response_model.dart';
 import '../api_enum.dart';
 
+
+/// api class to make the calls and pass on the response data.
 class DioClient {
   late Dio _client;
   final Api api;

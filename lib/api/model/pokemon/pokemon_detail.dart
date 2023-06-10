@@ -1,5 +1,8 @@
 import 'package:pokemon/api/model/pokemon/pokemon_list_details.dart';
 
+
+
+/// pokemon detail model to map the api api response
 class PokemonDetail {
   List<Abilities>? abilities;
   int? baseExperience;

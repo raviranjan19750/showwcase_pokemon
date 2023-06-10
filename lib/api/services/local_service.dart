@@ -9,6 +9,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../utils/shared_prefrences_key.dart';
 import '../model/pokemon/pokemon_list_details.dart';
 
+/// app side local storage.
+/// for  the project shared preference have been used
+/// any kind of services which are local to app and not to server should be defined and declared here
 
 class SharedPref {
   SharedPref();

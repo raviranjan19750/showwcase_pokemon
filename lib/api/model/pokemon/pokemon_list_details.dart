@@ -1,5 +1,9 @@
 import 'package:equatable/equatable.dart';
 
+
+/// pokemon detail list model to map the api response
+
+
 class PokemonListDetail extends Equatable {
   final String name;
   final String url;

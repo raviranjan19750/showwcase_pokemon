@@ -1,6 +1,10 @@
 import 'package:dio/dio.dart';
 import 'package:pokemon/api/api_enum.dart';
 
+
+/// interceptors to intercept any error and handle it at once during api call/response.
+///
+
 class ApiInterceptors extends Interceptor {
   final Api api;
 

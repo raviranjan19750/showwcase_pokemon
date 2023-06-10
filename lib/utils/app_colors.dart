@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pokemon/main.dart';
 
+
+
+/// color scheme for dark and light mode
 ColorScheme get _colorScheme =>
     Theme.of(MyApp.navigatorKey.currentContext!).colorScheme;
 // Primary Color
