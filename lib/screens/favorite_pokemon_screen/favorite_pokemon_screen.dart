@@ -60,21 +60,11 @@ class _FavoritePokemonScreenState extends State<FavoritePokemonScreen> {
                         itemBuilder: (_, index) {
                           PokemonListDetail detail = state.pokemonList.elementAt(index);
 
-                          return InkWell(
-                            onTap: (){
-                              navigateToNamedRoute(
-                                  name: AppRoutes.pokemonDetailsScreen,
-                                  arguments: {
-                                    'id': detail.id,
-                                    'name': detail.name
-                                  });
-                            },
-                            child: Container(
-                              margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-                              child: PokemonItem(
-                                pokemonImageURL: detail.url,
-                                pokemonName: detail.name,
-                              ),
+                          return Container(
+                            margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                            child: PokemonItem(
+                              pokemonImageURL: detail.url,
+                              pokemonName: detail.name,
                             ),
                           );
                         }): EmptyStateScreen(title: "List is empty",),
