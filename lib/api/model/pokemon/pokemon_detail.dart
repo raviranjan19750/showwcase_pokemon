@@ -42,27 +42,27 @@ class PokemonDetail {
     if (json['abilities'] != null) {
       abilities = <Abilities>[];
       json['abilities'].forEach((v) {
-        abilities!.add(new Abilities.fromJson(v));
+        abilities!.add(Abilities.fromJson(v));
       });
     }
     baseExperience = json['base_experience'];
     if (json['forms'] != null) {
       forms = <PokemonListDetail>[];
       json['forms'].forEach((v) {
-        forms!.add(new PokemonListDetail.fromJson(v));
+        forms!.add(PokemonListDetail.fromJson(v));
       });
     }
     if (json['game_indices'] != null) {
       gameIndices = <GameIndices>[];
       json['game_indices'].forEach((v) {
-        gameIndices!.add(new GameIndices.fromJson(v));
+        gameIndices!.add(GameIndices.fromJson(v));
       });
     }
     height = json['height'];
     if (json['held_items'] != null) {
       heldItems = <HeldItems>[];
       json['held_items'].forEach((v) {
-        heldItems!.add(new HeldItems.fromJson(v));
+        heldItems!.add(HeldItems.fromJson(v));
       });
     }
     id = json['id'];
@@ -71,25 +71,25 @@ class PokemonDetail {
     if (json['moves'] != null) {
       moves = <Moves>[];
       json['moves'].forEach((v) {
-        moves!.add(new Moves.fromJson(v));
+        moves!.add(Moves.fromJson(v));
       });
     }
     name = json['name'];
     order = json['order'];
     species =
-        json['species'] != null ? new Ability.fromJson(json['species']) : null;
+        json['species'] != null ? Ability.fromJson(json['species']) : null;
     sprites =
-        json['sprites'] != null ? new Sprites.fromJson(json['sprites']) : null;
+        json['sprites'] != null ? Sprites.fromJson(json['sprites']) : null;
     if (json['stats'] != null) {
       stats = <Stats>[];
       json['stats'].forEach((v) {
-        stats!.add(new Stats.fromJson(v));
+        stats!.add(Stats.fromJson(v));
       });
     }
     if (json['types'] != null) {
       types = <Types>[];
       json['types'].forEach((v) {
-        types!.add(new Types.fromJson(v));
+        types!.add(Types.fromJson(v));
       });
     }
     weight = json['weight'];
@@ -105,7 +105,7 @@ class Abilities {
 
   Abilities.fromJson(Map<String, dynamic> json) {
     ability =
-        json['ability'] != null ? new Ability.fromJson(json['ability']) : null;
+        json['ability'] != null ? Ability.fromJson(json['ability']) : null;
     isHidden = json['is_hidden'];
     slot = json['slot'];
   }
@@ -132,7 +132,7 @@ class GameIndices {
   GameIndices.fromJson(Map<String, dynamic> json) {
     gameIndex = json['game_index'];
     version =
-        json['version'] != null ? new Ability.fromJson(json['version']) : null;
+        json['version'] != null ? Ability.fromJson(json['version']) : null;
   }
 }
 
@@ -143,11 +143,11 @@ class HeldItems {
   HeldItems({this.item, this.versionDetails});
 
   HeldItems.fromJson(Map<String, dynamic> json) {
-    item = json['item'] != null ? new Ability.fromJson(json['item']) : null;
+    item = json['item'] != null ? Ability.fromJson(json['item']) : null;
     if (json['version_details'] != null) {
       versionDetails = <VersionDetails>[];
       json['version_details'].forEach((v) {
-        versionDetails!.add(new VersionDetails.fromJson(v));
+        versionDetails!.add(VersionDetails.fromJson(v));
       });
     }
   }
@@ -162,7 +162,7 @@ class VersionDetails {
   VersionDetails.fromJson(Map<String, dynamic> json) {
     rarity = json['rarity'];
     version =
-        json['version'] != null ? new Ability.fromJson(json['version']) : null;
+        json['version'] != null ? Ability.fromJson(json['version']) : null;
   }
 }
 
@@ -173,11 +173,11 @@ class Moves {
   Moves({this.move, this.versionGroupDetails});
 
   Moves.fromJson(Map<String, dynamic> json) {
-    move = json['move'] != null ? new Ability.fromJson(json['move']) : null;
+    move = json['move'] != null ? Ability.fromJson(json['move']) : null;
     if (json['version_group_details'] != null) {
       versionGroupDetails = <VersionGroupDetails>[];
       json['version_group_details'].forEach((v) {
-        versionGroupDetails!.add(new VersionGroupDetails.fromJson(v));
+        versionGroupDetails!.add(VersionGroupDetails.fromJson(v));
       });
     }
   }
@@ -194,10 +194,10 @@ class VersionGroupDetails {
   VersionGroupDetails.fromJson(Map<String, dynamic> json) {
     levelLearnedAt = json['level_learned_at'];
     moveLearnMethod = json['move_learn_method'] != null
-        ? new Ability.fromJson(json['move_learn_method'])
+        ? Ability.fromJson(json['move_learn_method'])
         : null;
     versionGroup = json['version_group'] != null
-        ? new Ability.fromJson(json['version_group'])
+        ? Ability.fromJson(json['version_group'])
         : null;
   }
 }
@@ -235,9 +235,9 @@ class Sprites {
     frontFemale = json['front_female'];
     frontShiny = json['front_shiny'];
     frontShinyFemale = json['front_shiny_female'];
-    other = json['other'] != null ? new Other.fromJson(json['other']) : null;
+    other = json['other'] != null ? Other.fromJson(json['other']) : null;
     versions = json['versions'] != null
-        ? new Versions.fromJson(json['versions'])
+        ? Versions.fromJson(json['versions'])
         : null;
   }
 }
@@ -251,11 +251,11 @@ class Other {
 
   Other.fromJson(Map<String, dynamic> json) {
     dreamWorld = json['dream_world'] != null
-        ? new DreamWorld.fromJson(json['dream_world'])
+        ? DreamWorld.fromJson(json['dream_world'])
         : null;
-    home = json['home'] != null ? new Home.fromJson(json['home']) : null;
+    home = json['home'] != null ? Home.fromJson(json['home']) : null;
     officialArtwork = json['official-artwork'] != null
-        ? new OfficialArtwork.fromJson(json['official-artwork'])
+        ? OfficialArtwork.fromJson(json['official-artwork'])
         : null;
   }
 }
@@ -326,28 +326,28 @@ class Versions {
 
   Versions.fromJson(Map<String, dynamic> json) {
     generationI = json['generation-i'] != null
-        ? new GenerationI.fromJson(json['generation-i'])
+        ? GenerationI.fromJson(json['generation-i'])
         : null;
     generationIi = json['generation-ii'] != null
-        ? new GenerationIi.fromJson(json['generation-ii'])
+        ? GenerationIi.fromJson(json['generation-ii'])
         : null;
     generationIii = json['generation-iii'] != null
-        ? new GenerationIii.fromJson(json['generation-iii'])
+        ? GenerationIii.fromJson(json['generation-iii'])
         : null;
     generationIv = json['generation-iv'] != null
-        ? new GenerationIv.fromJson(json['generation-iv'])
+        ? GenerationIv.fromJson(json['generation-iv'])
         : null;
     generationV = json['generation-v'] != null
-        ? new GenerationV.fromJson(json['generation-v'])
+        ? GenerationV.fromJson(json['generation-v'])
         : null;
     generationVi = json['generation-vi'] != null
-        ? new GenerationVi.fromJson(json['generation-vi'])
+        ? GenerationVi.fromJson(json['generation-vi'])
         : null;
     generationVii = json['generation-vii'] != null
-        ? new GenerationVii.fromJson(json['generation-vii'])
+        ? GenerationVii.fromJson(json['generation-vii'])
         : null;
     generationViii = json['generation-viii'] != null
-        ? new GenerationViii.fromJson(json['generation-viii'])
+        ? GenerationViii.fromJson(json['generation-viii'])
         : null;
   }
 }
@@ -360,10 +360,10 @@ class GenerationI {
 
   GenerationI.fromJson(Map<String, dynamic> json) {
     redBlue = json['red-blue'] != null
-        ? new RedBlue.fromJson(json['red-blue'])
+        ? RedBlue.fromJson(json['red-blue'])
         : null;
     yellow =
-        json['yellow'] != null ? new RedBlue.fromJson(json['yellow']) : null;
+        json['yellow'] != null ? RedBlue.fromJson(json['yellow']) : null;
   }
 }
 
@@ -402,9 +402,9 @@ class GenerationIi {
 
   GenerationIi.fromJson(Map<String, dynamic> json) {
     crystal =
-        json['crystal'] != null ? new Crystal.fromJson(json['crystal']) : null;
-    gold = json['gold'] != null ? new Gold.fromJson(json['gold']) : null;
-    silver = json['silver'] != null ? new Gold.fromJson(json['silver']) : null;
+        json['crystal'] != null ? Crystal.fromJson(json['crystal']) : null;
+    gold = json['gold'] != null ? Gold.fromJson(json['gold']) : null;
+    silver = json['silver'] != null ? Gold.fromJson(json['silver']) : null;
   }
 }
 
@@ -440,15 +440,15 @@ class Crystal {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['back_default'] = this.backDefault;
-    data['back_shiny'] = this.backShiny;
-    data['back_shiny_transparent'] = this.backShinyTransparent;
-    data['back_transparent'] = this.backTransparent;
-    data['front_default'] = this.frontDefault;
-    data['front_shiny'] = this.frontShiny;
-    data['front_shiny_transparent'] = this.frontShinyTransparent;
-    data['front_transparent'] = this.frontTransparent;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['back_default'] = backDefault;
+    data['back_shiny'] = backShiny;
+    data['back_shiny_transparent'] = backShinyTransparent;
+    data['back_transparent'] = backTransparent;
+    data['front_default'] = frontDefault;
+    data['front_shiny'] = frontShiny;
+    data['front_shiny_transparent'] = frontShinyTransparent;
+    data['front_transparent'] = frontTransparent;
     return data;
   }
 }
@@ -476,12 +476,12 @@ class Gold {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['back_default'] = this.backDefault;
-    data['back_shiny'] = this.backShiny;
-    data['front_default'] = this.frontDefault;
-    data['front_shiny'] = this.frontShiny;
-    data['front_transparent'] = this.frontTransparent;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['back_default'] = backDefault;
+    data['back_shiny'] = backShiny;
+    data['front_default'] = frontDefault;
+    data['front_shiny'] = frontShiny;
+    data['front_transparent'] = frontTransparent;
     return data;
   }
 }
@@ -495,13 +495,13 @@ class GenerationIii {
 
   GenerationIii.fromJson(Map<String, dynamic> json) {
     emerald = json['emerald'] != null
-        ? new OfficialArtwork.fromJson(json['emerald'])
+        ? OfficialArtwork.fromJson(json['emerald'])
         : null;
     fireredLeafgreen = json['firered-leafgreen'] != null
-        ? new FireredLeafgreen.fromJson(json['firered-leafgreen'])
+        ? FireredLeafgreen.fromJson(json['firered-leafgreen'])
         : null;
     rubySapphire = json['ruby-sapphire'] != null
-        ? new FireredLeafgreen.fromJson(json['ruby-sapphire'])
+        ? FireredLeafgreen.fromJson(json['ruby-sapphire'])
         : null;
   }
 }
@@ -532,13 +532,13 @@ class GenerationIv {
 
   GenerationIv.fromJson(Map<String, dynamic> json) {
     diamondPearl = json['diamond-pearl'] != null
-        ? new DiamondPearl.fromJson(json['diamond-pearl'])
+        ? DiamondPearl.fromJson(json['diamond-pearl'])
         : null;
     heartgoldSoulsilver = json['heartgold-soulsilver'] != null
-        ? new DiamondPearl.fromJson(json['heartgold-soulsilver'])
+        ? DiamondPearl.fromJson(json['heartgold-soulsilver'])
         : null;
     platinum = json['platinum'] != null
-        ? new DiamondPearl.fromJson(json['platinum'])
+        ? DiamondPearl.fromJson(json['platinum'])
         : null;
   }
 }
@@ -582,7 +582,7 @@ class GenerationV {
 
   GenerationV.fromJson(Map<String, dynamic> json) {
     blackWhite = json['black-white'] != null
-        ? new BlackWhite.fromJson(json['black-white'])
+        ? BlackWhite.fromJson(json['black-white'])
         : null;
   }
 }
@@ -611,7 +611,7 @@ class BlackWhite {
 
   BlackWhite.fromJson(Map<String, dynamic> json) {
     animated = json['animated'] != null
-        ? new DiamondPearl.fromJson(json['animated'])
+        ? DiamondPearl.fromJson(json['animated'])
         : null;
     backDefault = json['back_default'];
     backFemale = json['back_female'];
@@ -632,9 +632,9 @@ class GenerationVi {
 
   GenerationVi.fromJson(Map<String, dynamic> json) {
     omegarubyAlphasapphire = json['omegaruby-alphasapphire'] != null
-        ? new Home.fromJson(json['omegaruby-alphasapphire'])
+        ? Home.fromJson(json['omegaruby-alphasapphire'])
         : null;
-    xY = json['x-y'] != null ? new Home.fromJson(json['x-y']) : null;
+    xY = json['x-y'] != null ? Home.fromJson(json['x-y']) : null;
   }
 }
 
@@ -646,9 +646,9 @@ class GenerationVii {
 
   GenerationVii.fromJson(Map<String, dynamic> json) {
     icons =
-        json['icons'] != null ? new DreamWorld.fromJson(json['icons']) : null;
+        json['icons'] != null ? DreamWorld.fromJson(json['icons']) : null;
     ultraSunUltraMoon = json['ultra-sun-ultra-moon'] != null
-        ? new Home.fromJson(json['ultra-sun-ultra-moon'])
+        ? Home.fromJson(json['ultra-sun-ultra-moon'])
         : null;
   }
 }
@@ -660,7 +660,7 @@ class GenerationViii {
 
   GenerationViii.fromJson(Map<String, dynamic> json) {
     icons =
-        json['icons'] != null ? new DreamWorld.fromJson(json['icons']) : null;
+        json['icons'] != null ? DreamWorld.fromJson(json['icons']) : null;
   }
 }
 
@@ -674,7 +674,7 @@ class Stats {
   Stats.fromJson(Map<String, dynamic> json) {
     baseStat = json['base_stat'];
     effort = json['effort'];
-    stat = json['stat'] != null ? new Ability.fromJson(json['stat']) : null;
+    stat = json['stat'] != null ? Ability.fromJson(json['stat']) : null;
   }
 }
 
@@ -686,6 +686,6 @@ class Types {
 
   Types.fromJson(Map<String, dynamic> json) {
     slot = json['slot'];
-    type = json['type'] != null ? new Ability.fromJson(json['type']) : null;
+    type = json['type'] != null ? Ability.fromJson(json['type']) : null;
   }
 }
