@@ -150,9 +150,9 @@ class HomeScreen extends StatelessWidget {
             navigateToNamedRoute(
                 name: AppRoutes.addPokemonScreen);
           },
+          backgroundColor: Colors.white,
 
           child: Icon(Icons.add, color: Colors.red.withOpacity(0.5),),
-          backgroundColor: Colors.white,
 
         ),
       ),

@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:pokemon/utils/app_colors.dart';
 
 import '../utils/navigator/app_routes.dart';
@@ -131,8 +132,9 @@ class AddPokemonScreen extends StatelessWidget {
             ),
               onPressed: (){
 
-                if(_formKey.currentState?.validate()?? false) {
-                  popPage;
+                if(_formKey.currentState!.validate()) {
+                  Fluttertoast.showToast(msg: "Pokemon Added");
+                  popPage();
                 }
               },
 
