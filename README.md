@@ -1,16 +1,29 @@
-# pockemon_shocase
+# POKEMON - Catch your next POKEMON
 
-A new Flutter project.
+ Pokemon App to display initial list of pokemon further showing more information about a Pokemon when tapped.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+  - An authentication screen to login with dummy user
+  - Feature to save favorite Pokemon with separate screen to list them
+  - Search for a pokemon using Pokemon id or name
+  - An Infintite scrollable list for all the pokemons
+  - A Pokemon detailed screen
+  - Form to add new Pokemon 
+  - App has support for dark theme
+  - Used cubit for state management
+  - Attractive & interactive UI
+  - Clean code lines have been followed
 
-A few resources to get you started if this is your first Flutter project:
+## API 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Data is fetched from PokeAPI, check the link for documentation
+https://pokeapi.co/docs/v2
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Peek view
+
+ <p float="left">
+<img src="assets/ss/list.png" width="200" />
+<img src="assets/ss/fav_list.png" width="200" />  
+<img src="assets/ss/add.png" width="200" />  
+</p>
