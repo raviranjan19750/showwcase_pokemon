@@ -138,6 +138,7 @@ class AddPokemonScreen extends StatelessWidget {
                 }
               },
 
+
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 8),
                 child: Text("Add pokemon", style: title3Bold?.copyWith(color: Colors.white),),
