@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lottie/lottie.dart';
 import 'package:pokemon/bloc/splash_screen/splash_screen_bloc.dart';
+import 'package:pokemon/utils/app_colors.dart';
 import 'package:pokemon/utils/text_styles.dart';
 
 import '../bloc/splash_screen/splash_screen_event.dart';
@@ -28,6 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -46,7 +48,7 @@ class _SplashScreenState extends State<SplashScreen> {
           Container(
               alignment: Alignment.center,
 
-              child: Text("P O K E M O N",textAlign: TextAlign.center, style: title3Bold,))
+              child: Text("P O K E M O N",textAlign: TextAlign.center, style: title3Bold?.copyWith(color: primaryDark),))
 
         ],
       ),

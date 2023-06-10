@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:pokemon/utils/app_colors.dart';
 
 import '../utils/navigator/app_routes.dart';
 import '../utils/text_styles.dart';
@@ -38,9 +39,9 @@ class AddPokemonScreen extends StatelessWidget {
                   borderRadius: const BorderRadius.all(Radius.circular(16))),
               child: TextFormField(
                 cursorColor: Colors.red.withOpacity(0.5),
-                style:  const TextStyle(
+                style:   TextStyle(
                   fontSize: 14,
-                  color: Colors.black,
+                  color: primaryDark,
                 ),
                 decoration: InputDecoration(
                     border: InputBorder.none,
@@ -68,9 +69,9 @@ class AddPokemonScreen extends StatelessWidget {
                   borderRadius: const BorderRadius.all(Radius.circular(16))),
               child: TextFormField(
                 cursorColor: Colors.red.withOpacity(0.5),
-                style: const TextStyle(
+                style:  TextStyle(
                   fontSize: 14,
-                  color: Colors.black,
+                  color: primaryDark,
                 ),
                 decoration: InputDecoration(
                     border: InputBorder.none,
@@ -101,9 +102,9 @@ class AddPokemonScreen extends StatelessWidget {
                   borderRadius: const BorderRadius.all(Radius.circular(16))),
               child: TextFormField(
                 cursorColor: Colors.red.withOpacity(0.5),
-                style: const TextStyle(
+                style:  TextStyle(
                   fontSize: 14,
-                  color: Colors.black,
+                  color: primaryDark,
                 ),
                 decoration: InputDecoration(
                     border: InputBorder.none,

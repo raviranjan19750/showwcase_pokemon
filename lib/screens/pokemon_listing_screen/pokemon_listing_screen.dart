@@ -6,6 +6,7 @@ import 'package:pokemon/bloc/pokemon_listing_bloc/pokemon_listing_bloc.dart';
 import 'package:pokemon/bloc/pokemon_listing_bloc/pokemon_listing_event.dart';
 import 'package:pokemon/bloc/pokemon_listing_bloc/pokemon_listing_state.dart';
 import 'package:pokemon/screens/pokemon_listing_screen/widgets/pokemon_item.dart';
+import 'package:pokemon/utils/app_colors.dart';
 import 'package:pokemon/utils/navigator/app_routes.dart';
 import 'package:pokemon/utils/pagination_mixin.dart';
 
@@ -74,7 +75,7 @@ class _PokemonListingScreenState extends State<PokemonListingScreen>
                     ),
                     child: Row(
                       children: [
-                        const Icon(Icons.search),
+                         Icon(Icons.search, color: primaryDark,),
                         const SizedBox(width: 8,),
                         Expanded(
                           child: TextField(

@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pokemon/bloc/login_bloc/login_bloc.dart';
 import 'package:pokemon/bloc/login_bloc/login_event.dart';
 import 'package:pokemon/bloc/login_bloc/login_state.dart';
+import 'package:pokemon/utils/app_colors.dart';
 import 'package:pokemon/utils/text_styles.dart';
 
 import '../../utils/assets_images.dart';
@@ -57,9 +58,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: TextField(
                     controller: userNameTextEditingController,
                     cursorColor: Colors.red.withOpacity(0.5),
-                    style: const TextStyle(
+                    style:  TextStyle(
                       fontSize: 14,
-                      color: Colors.black,
+                      color: primaryDark,
                     ),
                     decoration: InputDecoration(
                         border: InputBorder.none,
@@ -80,9 +81,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: TextField(
                     controller: passwordTextEditingController,
                     cursorColor: Colors.red.withOpacity(0.5),
-                    style: const TextStyle(
+                    style:  TextStyle(
                       fontSize: 14,
-                      color: Colors.black,
+                      color: primaryDark,
                     ),
                     decoration: InputDecoration(
                         border: InputBorder.none,
